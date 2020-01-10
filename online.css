@@ -1,0 +1,39 @@
+.pages{
+  margin-bottom: 64px;
+}
+.btn-outline-primary{
+  border-radius: 30px;
+}
+img{
+  max-width: 300px;
+  max-height: 500px;
+  display:block;
+  margin:0 auto;
+}
+.comment-list{
+  padding-left: 0px;
+}
+.comt-avatar img{
+  float: left;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.comt-meta,.comt-main{
+  margin-left: 50px;
+}
+footer{
+  text-align: center;
+}
+.blog-main blockquote {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+  position: relative;
+  padding: 0.75rem 1.25rem 0rem 1.25rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.social-app{
+  margin-bottom: 20px;
+}
