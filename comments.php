@@ -17,7 +17,7 @@ function threadedComments($comments, $options) {
     }
 ?>
 
-    <li id="<?php $comments->theId(); ?>" class="alert alert-light list-unstyled comment byuser comment-author-admin bypostauthor depth-<?php echo $comments->levels+1; ?> comment-body<?php
+    <li id="<?php $comments->theId(); ?>" class="card list-unstyled depth-<?php echo $comments->levels+1; ?> comment-body<?php
     if ($comments->levels > 0) {
         echo ' comment-child';
         $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -34,12 +34,18 @@ function threadedComments($comments, $options) {
     $hash = md5(strtolower($comments->mail));
     $avatar = $host . $url . $hash . '?s=' . $size . '&r=' . $rating . '&d=mm';
 ?>
-        <div class="comt-avatar"><img alt="" data-src="<?php echo $avatar; ?>" srcset="<?php echo $avatar; ?> 2x" class="avatar photo" height="50" width="50" src="<?php $aoptions = Typecho_Widget::widget('Widget_Options'); $aoptions ->themeUrl("img/avatar-default.png"); ?>"></div>
-        <div class="comt-meta">
-            <span class="comt-author"><?php echo $author; ?></span> <?php $comments->date('Y-m-d'); ?>&nbsp&nbsp&nbsp&nbsp<?php $comments->reply('回复'); ?></span>
+        <div class="comt-avatar">
+          <img alt="" data-src="<?php echo $avatar; ?>" srcset="<?php echo $avatar; ?> 2x" class="avatar photo" height="42" width="42" src="<?php $aoptions = Typecho_Widget::widget('Widget_Options'); $aoptions ->themeUrl("img/avatar-default.png"); ?>">
+          <div class="comt-author"><small><?php echo $author; ?></small> </div>
+          <div class="comt-meta">
+            <small><?php $comments->date('Y-m-d'); ?></small>
+          </div>
         </div>
         <div class="comt-main" id="div-<?php $comments->theId(); ?>">
             <?php $comments->content(); ?>
+            <div class="comt-reply">
+              <small><?php $comments->reply('回复'); ?></small>
+            </div>
         </div>
     <?php if ($comments->children) { ?><ul class="children"><?php $comments->threadedComments($options); ?></ul><?php } ?>
     </li><?php } ?>
@@ -49,7 +55,7 @@ function threadedComments($comments, $options) {
 <div id="comments">
     <?php $this->comments()->to($comments); ?>
     <?php if ($comments->have()): ?>
-	<h3><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></h3>
+	<h3><?php $this->commentsNum(_t('暂无评论'), _t('评论')); ?></h3>
 
     <?php $comments->listComments(); ?>
 

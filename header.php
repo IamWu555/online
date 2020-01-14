@@ -14,7 +14,7 @@
     <!-- 使用url函数转换相关路径 -->
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('online.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('CSS/online.css'); ?>" rel="stylesheet" >
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 </head>
