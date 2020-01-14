@@ -1,0 +1,62 @@
+.pages {
+  margin-bottom: 64px;
+}
+
+.btn-outline-primary {
+  border-radius: 30px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.comment-list {
+  padding-left: 0px;
+}
+
+.comt-reply {
+  text-align: right;
+}
+
+.comt-avatar img {
+  float: left;
+  margin-right: 10px;
+}
+
+.comt-main {
+  margin-top: 10px;
+}
+
+.comt-author, .comt-meta, .comt-reply {
+  height: 20px;
+}
+
+.card {
+  padding: 14px;
+  margin-top: 10px;
+}
+
+.children {
+  padding-left: 5px;
+}
+
+footer {
+  text-align: center;
+}
+
+.blog-main blockquote {
+  background-color: #cce5ff;
+  border-left-color: #b8daff !important;
+  padding: 1.25rem 1.25rem 0 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #b8daff;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+}
+
+.social-app {
+  margin-bottom: 20px;
+}
